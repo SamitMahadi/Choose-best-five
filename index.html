@@ -48,7 +48,8 @@
                     <div class="car
                     d-actions pl-8">
 
-                        <button class="bg-cyan-600 px-10 py-2 text-white font-medium">SELECT </button>
+                        <button class="select-players bg-cyan-600 px-10 py-2 text-white font-medium ">SELECT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -65,7 +66,8 @@
                     <div class="car
                     d-actions pl-8">
 
-                        <button class="bg-cyan-600 px-10 py-2 text-white font-medium">SELECT </button>
+                        <button class=" select-players bg-cyan-600 px-10 py-2 text-white font-medium">SELECT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -83,7 +85,8 @@
                     <div class="car
                     d-actions pl-8">
 
-                        <button class="bg-cyan-600 px-10 py-2 text-white font-medium">SELECT </button>
+                        <button class=" select-players bg-cyan-600 px-10 py-2 text-white font-medium">SELECT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -101,7 +104,8 @@
                     <div class="car
                     d-actions pl-8">
 
-                        <button class="bg-cyan-600 px-10 py-2 text-white font-medium">SELECT </button>
+                        <button class="select-players bg-cyan-600 px-10 py-2 text-white font-medium">SELECT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -118,7 +122,8 @@
                     <div class="car
                     d-actions pl-8">
 
-                        <button class="bg-cyan-600 px-10 py-2 text-white font-medium">SELECT </button>
+                        <button class="select-players bg-cyan-600 px-10 py-2 text-white font-medium">SELECT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -133,7 +138,8 @@
                     <div class="car
                     d-actions pl-8">
 
-                        <button class="bg-cyan-600 px-10 py-2 text-white font-medium">SELECT </button>
+                        <button class="select-players bg-cyan-600 px-10 py-2 text-white font-medium">SELECT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -148,7 +154,8 @@
                     <div class="car
                     d-actions pl-8">
 
-                        <button class="bg-cyan-600 px-10 py-2 text-white font-medium">SELECT </button>
+                        <button class="select-players bg-cyan-600 px-10 py-2 text-white font-medium">SELECT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -162,7 +169,8 @@
                     <div class="car
                     d-actions pl-8">
 
-                        <button class="bg-cyan-600 px-10 py-2 text-white font-medium">SELECT </button>
+                        <button class="select-players bg-cyan-600 px-10 py-2 text-white font-medium">SELECT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -173,10 +181,10 @@
                     <h2 class="card-title text-white pl-4 text-2xl ">Marquinhos</h2>
                     <p class="text-white pl-4 text-zinc-600 font-medium	">52 Goals <span> . </span> 160 Assists
                     </p>
-                    <div class="car
-                    d-actions pl-8">
+                    <div class="card-actions pl-8">
 
-                        <button class="bg-cyan-600 px-10 py-2 text-white font-medium">SELECT </button>
+                        <button class="select-players bg-cyan-600 px-10 py-2 text-white font-medium">SELECT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -189,11 +197,10 @@
         <aside class="pl-10  ">
             <div class="bg-black w-64 pt-2 pb-2 rounded-2xl h-96">
                 <h1 class="text-white text-2xl text-center ">SELECTED-V</h1>
-                <ul class="text-white pl-2 pb-5"></ul>
-                <ul class="text-white pl-2 pb-5"></ul>
-                <ul class="text-white pl-2 pb-5"></ul>
-                <ul class="text-white pl-2 pb-5"></ul>
-                <ul class="text-white pl-2 pb-5"></ul>
+
+                <ol id="playerSelect" class=" list-decimal text-xl	text-white pl-10 pt-5 pb-5">
+
+                </ol>
             </div>
 
             <!-- //////////////calculate//////// -->
@@ -202,35 +209,37 @@
                 <h1 class="text-white text-2xl text-center ">BUDGET</h1>
                 <div class="flex flex-nowrap pl-2 pb-2 pt-5">
                     <h2 class="text-lg text-white  pr-4">Per Players :</h2>
-                    <input type="text" class=" input input-bordered h-7  w-2/5" />
+                    <input id="per-player-fee" type="text" class="input input-bordered h-7  w-2/5" />
 
                 </div>
                 <div class="pl-10  pt-5">
 
-                    <button class="bg-cyan-600 px-12 py-2 text-white font-medium">CALCULATE </button>
+                    <button id="per-player-calculate" class="bg-cyan-600 px-12 py-2 text-white font-medium">CALCULATE
+                    </button>
                 </div>
-                <h2 class="text-lg text-white pt-2 pl-2 pr-4">Player Expenses: <span>$000</span>
+                <h2 class="text-lg text-white pt-2 pl-2 pr-4">Player Expenses: $<span id="player-expenses">0</span>
 
                 </h2>
 
                 <div class="flex flex-nowrap pl-2 pt-5">
                     <h2 class="text-lg text-white  pr-4">Manager :</h2>
-                    <input type="text" class=" input input-bordered h-7 ml-7 w-2/5" />
+                    <input id="maneger-fee" type="text" class=" input input-bordered h-7 ml-7 w-2/5" />
 
                 </div>
 
                 <div class="flex flex-nowrap pl-2 pt-5">
                     <h2 class="text-lg text-white  pr-4">Coach :</h2>
-                    <input type="text" class=" input input-bordered h-7 ml-12  w-2/5" />
+                    <input id="coach-fee" type="text" class=" input input-bordered h-7 ml-12  w-2/5" />
 
                 </div>
                 <div class="pl-5 pt-5">
 
-                    <button class="bg-cyan-600 px-10 py-2 text-white font-medium">CALCULATE TOTAL </button>
+                    <button id="calculate-total" class="bg-cyan-600 px-10 py-2 text-white font-medium">CALCULATE TOTAL
+                    </button>
                 </div>
 
 
-                <h2 class="text-lg text-white pt-2 pl-2 pr-4 ">Total: <span>$000</span>
+                <h2 class="text-lg text-white pt-2 pl-2 pr-4 ">Total: $<span id="total-exp">0</span>
 
                 </h2>
 
@@ -245,8 +254,9 @@
     </footer>
 
 
-
+    <script src="js/utilities.js"></script>
     <script src="js/select-5.js"></script>
+    <script src="js/calculate.js"></script>
 
 
 </body>
